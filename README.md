@@ -1,8 +1,44 @@
-# React + Vite
+# ReTube
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An almost youTube clone project built with ReactJs, Material UI and Youtube-v3 API from Rapid API hub.
 
-Currently, two official plugins are available:
+- You have a homepage
+- A search feed
+- A channel detail page with basic information and videos
+- A video detail page with views, likes, published time, description and comments.
+- Fully responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder structure
+
+```
+📦src
+ ┣ 📂components
+ ┃ ┣ 📜AppLoader.jsx
+ ┃ ┣ 📜ChannelCard.jsx
+ ┃ ┣ 📜CommentCard.jsx
+ ┃ ┣ 📜CommentList.jsx
+ ┃ ┣ 📜Description.jsx
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜Navbar.jsx
+ ┃ ┣ 📜Root.jsx
+ ┃ ┣ 📜SearchBar.jsx
+ ┃ ┣ 📜Sidebar.jsx
+ ┃ ┣ 📜VideoCard.jsx
+ ┃ ┣ 📜VideoList.jsx
+ ┃ ┣ 📜VideoPlayer.jsx
+ ┃ ┗ 📜Videos.jsx
+ ┣ 📂pages
+ ┃ ┣ 📜ChannelDetail.jsx
+ ┃ ┣ 📜Feed.jsx
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜SearchFeed.jsx
+ ┃ ┗ 📜VideoDetail.jsx
+ ┣ 📂utils
+ ┃ ┣ 📜constants.js
+ ┃ ┣ 📜fetchFromApi.js
+ ┃ ┣ 📜fetchVideoComments.js
+ ┃ ┗ 📜formatDate.js
+ ┣ 📜App.jsx
+ ┣ 📜index.css
+ ┗ 📜main.jsx
+```
