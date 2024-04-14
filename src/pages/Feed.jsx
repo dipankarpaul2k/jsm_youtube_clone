@@ -21,7 +21,7 @@ export default function Feed() {
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "92vh" },
+          height: { sx: "auto", md: "90vh" },
           borderRight: "1px solid #3d3d3d",
           px: { sx: 0, md: 2 },
         }}
@@ -35,12 +35,12 @@ export default function Feed() {
         </Typography>
       </Box>
 
-      <Box p={{ sx: 0, md: 2 }} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box p={{ xs: 0, md: 2 }} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
-          variant="h4"
+          variant="h5"
           fontWeight={"bold"}
           mb={2}
-          sx={{ color: "white" }}
+          sx={{ color: "white", fontSize: { xs: "20px", sm: "24px" } }}
         >
           {selectedCategory} <span style={{ color: "#fc1503" }}>videos</span>
         </Typography>

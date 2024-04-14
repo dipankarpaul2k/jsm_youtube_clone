@@ -20,12 +20,15 @@ export default function SearchFeed() {
   if (!Videos) return <AppLoader />;
 
   return (
-    <Box p={{ sx: 0, md: 2 }} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+    <Box
+      p={{ xs: 0, md: 2 }}
+      sx={{ overflowY: "auto", height: "90vh", flex: 2 }}
+    >
       <Typography
-        variant="h4"
+        variant="h5"
         fontWeight={"bold"}
         mb={2}
-        sx={{ color: "white" }}
+        sx={{ color: "white", fontSize: { xs: "20px", sm: "24px" } }}
       >
         Search result for <span style={{ color: "#fc1503" }}>{searchTerm}</span>
       </Typography>
@@ -34,6 +37,3 @@ export default function SearchFeed() {
     </Box>
   );
 }
-
-
-
