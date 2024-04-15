@@ -4,8 +4,6 @@ import SearchBar from "./SearchBar";
 
 import { logo } from "../utils/constants";
 
-// const logo = "https://i.ibb.co/s9Qys2j/logo.png";
-
 export default function Navbar() {
   return (
     <Stack
@@ -13,7 +11,8 @@ export default function Navbar() {
       p={2}
       alignItems={"center"}
       justifyContent={"space-between"}
-      sx={{ position: "sticky", top: 0, background: "#000" }}
+      sx={{ position: "sticky", top: 0, background: "#000", zIndex: 5 }}
+      px={{xs: 0, md: 2}}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center", color: "red", gap: "10px" }}>
         <img src={logo} alt="logo" height={40} />

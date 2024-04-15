@@ -25,10 +25,10 @@ export default function SearchFeed() {
       sx={{ overflowY: "auto", height: "90vh", flex: 2 }}
     >
       <Typography
-        variant="h5"
+        variant="h4"
         fontWeight={"bold"}
-        mb={2}
-        sx={{ color: "white", fontSize: { xs: "20px", sm: "24px" } }}
+        my={{xs: "0.5rem", md: 2, sm: 1}}
+        sx={{ color: "white", fontSize: { xs: "1.5rem", sm: "2.125rem" } }}
       >
         Search result for <span style={{ color: "#fc1503" }}>{searchTerm}</span>
       </Typography>

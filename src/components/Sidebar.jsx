@@ -56,6 +56,7 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
           style={{
             backgroundColor: category.name === selectedCategory && "#fc1503",
             color: "#fff",
+            borderColor: category.name === selectedCategory && "#fc1503",
           }}
           onClick={() => setSelectedCategory(category.name)}
         >
@@ -69,7 +70,10 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
             {category.icon}
           </span>
           <span
-            style={{ opacity: category.name === selectedCategory ? 1 : 0.8, whiteSpace: "nowrap"  }}
+            style={{
+              opacity: category.name === selectedCategory ? 1 : 0.8,
+              whiteSpace: "nowrap",
+            }}
           >
             {category.name}
           </span>

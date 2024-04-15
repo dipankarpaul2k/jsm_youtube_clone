@@ -72,17 +72,23 @@ export default function ChannelCard({ channelDetail, marginTop }) {
                 Views
               </Typography>
               {/* channel description */}
-              <>
-                <Description
-                  description={channelDetail?.snippet?.description}
-                  expanded={expanded}
-                />
-                <Box display="flex" justifyContent="center">
-                  <Button variant="text" onClick={toggleExpanded}>
-                    {expanded ? "See Less" : "See More"}
-                  </Button>
-                </Box>
-              </>
+              {channelDetail?.snippet?.description && (
+                <>
+                  <Description
+                    description={channelDetail?.snippet?.description}
+                    expanded={expanded}
+                  />
+                  <Box display="flex" justifyContent="center">
+                    <Button
+                      variant="text"
+                      onClick={toggleExpanded}
+                      sx={{ color: "#fff" }}
+                    >
+                      {expanded ? "See Less" : "See More"}
+                    </Button>
+                  </Box>
+                </>
+              )}
             </>
           )}
         </CardContent>

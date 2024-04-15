@@ -37,10 +37,11 @@ export default function Feed() {
 
       <Box p={{ xs: 0, md: 2 }} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
-          variant="h5"
+          variant="h4"
           fontWeight={"bold"}
-          mb={2}
-          sx={{ color: "white", fontSize: { xs: "20px", sm: "24px" } }}
+          my={{xs: "0.5rem", md: 2, sm: 1}}
+          sx={{ color: "white", fontSize: { xs: "1.5rem", sm: "2.125rem" },
+         }}
         >
           {selectedCategory} <span style={{ color: "#fc1503" }}>videos</span>
         </Typography>
