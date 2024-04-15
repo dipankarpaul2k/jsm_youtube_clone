@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 
 import { Box, Stack, Typography, Button } from "@mui/material";
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 
 import Description from "./Description";
 import formatDate from "../utils/formatDate";
@@ -25,7 +26,12 @@ export default function VideoPlayer({ id, snippet, statistics }) {
         className="react-player"
         controls
       />
-      <Typography variant="h6" color={"white"} fontWeight={"bold"}>
+      <Typography
+        variant="h6"
+        color={"white"}
+        fontWeight={"bold"}
+        fontSize={{ xs: "16px", sm: "20px" }}
+      >
         {title}
       </Typography>
       <Stack
@@ -39,7 +45,13 @@ export default function VideoPlayer({ id, snippet, statistics }) {
             {channelTitle}
           </Typography>
         </Link>
-        <Typography variant="body1">
+        <Typography
+          variant="body1"
+          display={"flex"}
+          alignItems={"center"}
+          gap={1}
+        >
+          <ThumbUpOutlinedIcon fontSize="small" />
           {parseInt(likeCount).toLocaleString()} likes
         </Typography>
       </Stack>
@@ -51,14 +63,27 @@ export default function VideoPlayer({ id, snippet, statistics }) {
           alignItems={"center"}
         >
           <Stack direction="row" gap="10px" alignItems="center">
-            <Typography variant="body1" sx={{ opacity: 0.7 }}>
+            <Typography
+              variant="body1"
+              sx={{ opacity: 0.7 }}
+              fontSize={{ xs: "14px", sm: "16px" }}
+            >
               {parseInt(viewCount).toLocaleString()} views
             </Typography>
-            <Typography variant="body1" sx={{ opacity: 0.7 }}>
+            <Typography
+              variant="body1"
+              sx={{ opacity: 0.7 }}
+              fontSize={{ xs: "14px", sm: "16px" }}
+            >
               {formatDate(publishedAt)}
             </Typography>
           </Stack>
-          <Button variant="text" onClick={toggleExpanded} sx={{color: "white", textTransform: "capitalize"}}>
+          <Button
+            variant="text"
+            onClick={toggleExpanded}
+            sx={{ color: "white", textTransform: "capitalize",
+          fontSize: "16px", fontWeight: "normal" }}
+          >
             {expanded ? "See Less" : "See More"}
           </Button>
         </Stack>

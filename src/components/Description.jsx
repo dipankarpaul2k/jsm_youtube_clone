@@ -6,7 +6,10 @@ function Description({ description, tags, expanded }) {
   return (
     <Box bgcolor={"#272727"} p={2} borderRadius={2}>
       <Collapse in={expanded} collapsedSize={50}>
-        <Typography variant="body1" sx={{ textWrap: "balance" }}>
+        <Typography
+          variant="body1"
+          sx={{ textWrap: "balance", wordBreak: "break-word" }}
+        >
           {description}
         </Typography>
         <Stack direction="row" spacing={1} flexWrap={"wrap"} mt={2}>

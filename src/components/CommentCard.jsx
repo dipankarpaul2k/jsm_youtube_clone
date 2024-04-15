@@ -6,16 +6,16 @@ import {
   Avatar,
   ListItemText,
   Typography,
-  Divider,
   Stack,
 } from "@mui/material";
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
+
 import formatDate from "../utils/formatDate";
 
 function CommentCard({ comment }) {
   const {
     author,
     authorChannelId,
-    authorChannelUrl,
     authorImgUrl,
     commentText,
     likes,
@@ -39,19 +39,43 @@ function CommentCard({ comment }) {
                 {author}
               </Link>
               <span style={{ fontSize: "10px", color: "gray" }}> &#9679; </span>
-              <Typography sx={{ display: "inline", color: "gray" }}>
+              <Typography
+                sx={{ display: "inline", color: "gray" }}
+                fontSize={{ xs: "14px", sm: "16px" }}
+              >
                 {formatDate(publishedAt)}
               </Typography>
             </>
           }
-          secondary={commentText}
+          secondary={
+            <>
+              <Typography
+                sx={{ wordBreak: "break-word" }}
+                fontSize={{ xs: "14px", sm: "16px" }}
+              >
+                {commentText}
+              </Typography>
+            </>
+          }
           primaryTypographyProps={{
             color: "#fff",
           }}
           secondaryTypographyProps={{ color: "#fff" }}
         />
         <ListItemText
-          secondary={`${likes} Likes`}
+          secondary={
+            <>
+              <Typography
+                fontSize={{ xs: "14px", sm: "16px" }}
+                display={"flex"}
+                alignItems={"center"}
+                gap={1}
+              >
+                <ThumbUpOutlinedIcon fontSize="small" />
+                {`${likes} Likes`}
+              </Typography>
+            </>
+          }
           secondaryTypographyProps={{ color: "#fff" }}
         />
       </Stack>
